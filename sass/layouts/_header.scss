@@ -1,0 +1,115 @@
+.header__container {
+    display: flex;
+    align-items: center;
+}
+
+.header__logo {
+    margin-right: 93px;
+    color: $black;
+}
+
+.header-nav {
+    display: flex;
+}
+
+.header-nav__list {
+    display: flex;
+}
+
+.header-nav__item {
+    position: relative;
+}
+
+.header-nav__item:not(:last-child) {
+    margin-right: 40px;
+}
+
+.header-nav__link {
+    display: inline-block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    color: $title-text-color;
+
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover, &:focus {
+        color: $accent-color;
+    }
+} 
+
+.header-nav__link--current {
+    color: $accent-color;
+}
+    
+.header-nav__link--current::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+
+
+    background: $accent-color;
+    border-radius: 2px;
+}
+
+.header-contact {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+
+.header-contact__item:not(:last-child) {
+    margin-right: 40px;
+}
+
+.header-contact__phone, 
+.header-contact__email {
+    display: inline-flex;
+    align-items: center;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    color: $primary-text-color;
+
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover, 
+    &:focus {
+        color: $accent-color;
+    }
+
+    &:hover .header-contact__icon-envelope,
+    &:focus .header-contact__icon-envelope,
+    &:hover .header-contact__icon-smartphone,
+    &:focus .header-contact__icon-smartphone {
+        fill: $accent-color;
+    }
+}
+
+.header-contact__icon-envelope, 
+.header-contact__icon-smartphone {
+    fill: $primary-text-color;
+
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.header-contact__email-address,
+.header-contact__phone-number {
+    margin-left: 10px;
+}
+    
+
+

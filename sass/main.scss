@@ -1,10 +1,15 @@
 @import './base/reset';
 @import './base/normalize';
+@import './base/visually-hidden';
 
-@import './utils/vars';
 
+
+@import './components/vars';
+@import './components/container';
+@import './components/mixins';
 @import './components/components';
 @import './components/modal';
+
 
 @import './layouts/header';
 @import './layouts/hero';

@@ -1,20 +1,41 @@
 .team {
-    background-color: var(--background-color);
+    background-color: $background-color;
 }
+
 
 .team__list {
     padding: 0;
     margin: 0;
-    display: flex;
-    flex-wrap: wrap;
-    margin-left: -15px;
-    margin-right: -15px;
+
+
+    @media screen and (min-width: 768px) {
+        display: flex;
+        flex-wrap: wrap;
+        margin: -15px;
+        
+        }
+    
 }
 
 .team__item {
-    flex-basis: calc(100% / 4 - 30px);
-    margin-left: 15px;
-    margin-right: 15px;
+
+    @media screen and (min-width: 768px) {
+       flex-basis: calc(50% - 30px);
+        margin: 15px;
+        
+    }
+
+    @media screen and (min-width: 1200px) {
+        flex-basis: calc(25% - 30px);
+        margin: 15px;
+    }
+
+    &:not(:last-child) {
+        @media screen and (max-width: 767px) {
+            margin-bottom: 30px;
+        }
+    }
+    
 }
 
 .card {
@@ -28,7 +49,7 @@
     padding-bottom: 30px;
     text-align: center;
     background-color: $white;
-    }
+}
 
 .person {
     font-size: 16px;
@@ -36,19 +57,20 @@
 }
 
 .person__name {
-        margin-bottom: 10px;
-        font-weight: 500;
-        color: $title-text-color;
+    margin-bottom: 10px;
+    font-weight: 500;
+    color: $title-text-color;
 }
 
 .person__position {
-        color: $primary-text-color;
+    color: $primary-text-color;
 }
 
+
 .person__social {
-        display: flex;
-        justify-content: center;
-        gap: 10px;            
+    display: flex;
+    justify-content: center;
+    gap: 10px;
 }
 
 .social-networks {
@@ -70,22 +92,16 @@
         background-color: $accent-color;
     }
 }
-    
+
 .social-networks__icon {
     width: 20px;
     height: 20px;
     fill: #AFB1B8;
 
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    
+
     .social-networks__link:hover &,
     .social-networks__link:focus & {
         fill: $white;
     }
 }
-    
-    
-
-
-
-

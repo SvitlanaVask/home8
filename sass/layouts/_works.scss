@@ -1,3 +1,9 @@
+.work {
+    @media screen and (max-width:1199px) {
+        display: none;
+    }
+}
+
 .we-do {
     display: flex;
 }
@@ -23,10 +29,8 @@
     padding-top: 27px;
     padding-bottom: 27px;
 
-    font-weight: 700;
-    font-size: 14px;
+    @include typografy (700, 14px, 1.14, 0.03em);
     text-align: center;
-    letter-spacing: 0.03em;
     text-transform: uppercase;    
 }
 

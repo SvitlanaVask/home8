@@ -12,13 +12,13 @@
         flex-wrap: wrap;
         justify-content: start;
         row-gap: 15px;
+        padding-right: 100px;
     }
 }
 
 .filter__item:not(:last-child) {
     display: block;
     margin-right: 8px;
-
 }
 
 .filter__btn {
@@ -28,8 +28,6 @@
     padding-bottom: 6px;
     padding-left: 22px;
     padding-right: 22px;
-
-    
 
     @include typografy (500, 16px, 1.62, 0.03em);
     text-align: center;

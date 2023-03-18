@@ -23,43 +23,99 @@
 
   <!-- Header -->
   <header class="header">
-    <div class="header__container container-line container">
-      <a href="./index.html" class="logo header__logo link">
-        <span class="logo__accent">Web</span>Studio
-      </a>
-      <nav class="header-nav">
-        <ul class="header-nav__list list">
-          <li class="header-nav__item">
-            <a href="./index.html" class="header-nav__link  link">Студія</a>
-          </li>
-          <li class="header-nav__item">
-            <a href="./portfolio.html" class="header-nav__link header-nav__link--current link">Портфоліо</a>
-          </li>
-          <li class="header-nav__item">
-            <a href="" class="header-nav__link link">Контакти</a>
-          </li>
-        </ul>
-      </nav>
-      <ul class="header-contact list">
-        <li class="header-contact__item">
-          <a href="mailto:info@devstudio.com" class="header-contact__email link"> 
-            <svg class="header-contact__icon-envelope" width="16px" height="12px">
-              <use href="./images/icons.svg#icon-envelope"></use>
-            </svg> 
-            <span class="header-contact__email-address">info@devstudio.com</span>
-          </a>
-        </li>
-        <li class="header-contact__item">
-          <a href="tel:+380961111111" class="header-contact__phone link">
-            <svg class="header-contact__icon-smartphone" width="16px" height="12px">
-              <use href="./images/icons.svg#icon-smartphone"></use>
-            </svg>
-            <span class="header-contact__phone-number">+38 096 111 11 11</span>
-          </a>
-        </li>
-      </ul>
-    </div>
-  </header>
+      <div class="container">
+        <a href="./index.html" class=" header__logo logo link"><span class="logo__accent">Web</span> Studio</a>
+        
+        <button class="menu-button__open">
+          <svg width="40px" height="40px">
+            <use class="icon-menu" href="./images/icons.svg#icon-menu"></use>
+          </svg>
+        </button>
+
+        <nav class="header-nav">
+              <ul class="header-nav__list list">
+                <li class="header-nav__item">
+                  <a href="./index.html" class="header-nav__link link">Студія</a>
+                </li>
+                <li class="header-nav__item">
+                  <a href="./portfolio.html" class="header-nav__link header-nav__link--current link">Портфоліо</a>
+                </li>
+                <li class="header-nav__item">
+                  <a href="" class="header-nav__link link">Контакти</a>
+                </li>
+              </ul>
+          </nav>
+
+          <ul class="header-contact list">
+              <li class="header-contact__item">
+                <a href="mailto:info@devstudio.com" class="header-contact__email link"> 
+                  <svg class="header-contact__icon-envelope" width="16px" height="12px">
+                    <use href="./images/icons.svg#icon-envelope"></use>
+                  </svg> 
+                  <span class="header-contact__email-address">info@devstudio.com</span>
+                </a>
+              </li>
+              <li class="header-contact__item">
+                <a href="tel:+380961111111" class="header-contact__phone link">
+                  <svg class="header-contact__icon-smartphone" width="16px" height="12px">
+                    <use href="./images/icons.svg#icon-smartphone"></use>
+                  </svg>
+                  <span class="header-contact__phone-number">+38 096 111 11 11</span>
+                </a>
+              </li>
+          </ul>
+        
+
+
+        <div class="menu-container is-hidden">
+          <div class="mobile-top">
+            <button class="menu-button__close">
+              <svg width="40px" height="40px">
+                <use class="icon-menu-close" href="./images/icons.svg#icon-menu-close"></use>
+              </svg>
+            </button>
+
+            <nav class="mobile-nav">
+              <ul class="mobile-nav__list list">
+                <li class="mobile-nav__item">
+                  <a href="./index.html" class="mobile-nav__link link mobile-nav__link--current">Студія</a>
+                </li>
+                <li class="mobile-nav__item">
+                  <a href="./portfolio.html" class="mobile-nav__link link">Портфоліо</a>
+                </li>
+                <li class="mobile__item">
+                  <a href="" class="mobile-nav__link link">Контакти</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+
+          <div class="mobile-bottom">
+            <ul class="mobile-contact list">
+              <li class="mobile-contact__item">
+                <a href="mailto:info@devstudio.com" class="mobile-contact__email link"> 
+                  info@devstudio.com
+                </a>
+              </li>
+              <li class="mobile-contact__item">
+                <a href="tel:+380961111111" class="mobile-contact__phone link">
+                  +38 096 111 11 11
+                </a>
+              </li>
+            </ul>
+            <ul class="mobile-social list">
+              <li class="mobile-social__item"><a href="" class="mobile-social__link link">Instagram</a></li>
+              <li class="mobile-social__item"><a href="" class="mobile-social__link link">Twitter</a></li>
+              <li class="mobile-social__item"><a href="" class="mobile-social__link link">Facebook</a></li>
+              <li class="mobile-social__item"><a href="" class="mobile-social__link link">Linkedin</a></li>
+            </ul>
+          </div>
+
+        </div>
+        
+      </div>
+    </header>
+ 
 
     <main class="portfolio-main">
       <!-- Фільтри -->
@@ -100,7 +156,26 @@
               <a href="" class="card-link link">
                 <article class="card">
                   <div class="card__thumb">
-                    <img src="./images/proj1.jpg" alt="Технокряк" width="370" />
+                    <picture>
+                      <source 
+                        media="(min-width: 1200px)" 
+                        srcset="
+                          ./images/proj1.jpg 1x,
+                          ./images/proj1-2x.jpg 2x">
+                      <source 
+                        media="(min-width: 768px)" 
+                        srcset="
+                          ./images/proj1-tab.jpg 1x,
+                          ./images/proj1-tab-2x.jpg 2x">
+                      <source 
+                        media="(max-width: 767px)" 
+                        srcset="
+                          ./images/proj1-mob.jpg 1x,
+                          ./images/proj1-mob-2x.jpg 2x">
+
+                      <img src="./images/proj1-mob.jpg" alt="Технокряк"/>
+                    </picture>
+                    
                     <div class="card__overlay">
                       Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.
                     </div>
@@ -117,7 +192,26 @@
               <a href="" class="card-link link">
                 <article class="card">
                 <div class="card__thumb">
-                  <img src="./images/proj2.jpg" alt="Постер New Orlean vs Golden Star" width="370" />
+                    <picture>
+                      <source 
+                        media="(min-width: 1200px)" 
+                        srcset="
+                          ./images/proj2.jpg 1x,
+                          ./images/proj2-2x.jpg 2x">
+                      <source 
+                        media="(min-width: 768px)" 
+                        srcset="
+                          ./images/proj2-tab.jpg 1x,
+                          ./images/proj2-tab-2x.jpg 2x">
+                      <source 
+                        media="(max-width: 767px)" 
+                        srcset="
+                          ./images/proj2-mob.jpg 1x,
+                          ./images/proj2-mob-2x.jpg 2x">
+
+                      <img src="./images/proj2-mob.jpg" alt="Постер New Orlean vs Golden Star"/>
+                    </picture>
+                  
                   <div class="card__overlay">
                       Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.
                   </div>
@@ -135,7 +229,26 @@
               <a href="" class="card-link link">
                 <article class="card">
                 <div class="card__thumb"> 
-                  <img src="./images/proj3.jpg" alt="Ресторан Seafood" width="370" />
+                    <picture>
+                      <source 
+                        media="(min-width: 1200px)" 
+                        srcset="
+                          ./images/proj3.jpg 1x,
+                          ./images/proj3-2x.jpg 2x">
+                      <source 
+                        media="(min-width: 768px)" 
+                        srcset="
+                          ./images/proj3-tab.jpg 1x,
+                          ./images/proj3-tab-2x.jpg 2x">
+                      <source 
+                        media="(max-width: 767px)" 
+                        srcset="
+                          ./images/proj3-mob.jpg 1x,
+                          ./images/proj3-mob-2x.jpg 2x">
+
+                      <img src="./images/proj3-mob.jpg" alt="Ресторан Seafood"/>
+                    </picture>
+                  
                   <div class="card__overlay">
                     Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.
                   </div>
@@ -153,7 +266,26 @@
               <a href="" class="card-link link">
                 <article class="card">
                 <div class="card__thumb">
-                  <img src="./images/proj4.jpg" alt="Проєкт Prime" width="370" />
+                    <picture>
+                      <source 
+                        media="(min-width: 1200px)" 
+                        srcset="
+                          ./images/proj4.jpg 1x,
+                          ./images/proj4-2x.jpg 2x">
+                      <source 
+                        media="(min-width: 768px)" 
+                        srcset="
+                          ./images/proj4-tab.jpg 1x,
+                          ./images/proj4-tab-2x.jpg 2x">
+                      <source 
+                        media="(max-width: 767px)" 
+                        srcset="
+                          ./images/proj4-mob.jpg 1x,
+                          ./images/proj4-mob-2x.jpg 2x">
+
+                      <img src="./images/proj4-mob.jpg" alt="Проєкт Prime"/>
+                    </picture>
+                  
                   <div class="card__overlay">
                     Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.
                   </div>
@@ -171,7 +303,26 @@
               <a href="" class="card-link link">
                 <article class="card">
                 <div class="card__thumb">
-                  <img src="./images/proj5.jpg" alt="Проєкт Boxes" width="370" />
+                    <picture>
+                      <source 
+                        media="(min-width: 1200px)" 
+                        srcset="
+                          ./images/proj5.jpg 1x,
+                          ./images/proj5-2x.jpg 2x">
+                      <source 
+                        media="(min-width: 768px)" 
+                        srcset="
+                          ./images/proj5-tab.jpg 1x,
+                          ./images/proj5-tab-2x.jpg 2x">
+                      <source 
+                        media="(max-width: 767px)" 
+                        srcset="
+                          ./images/proj5-mob.jpg 1x,
+                          ./images/proj5-mob-2x.jpg 2x">
+
+                      <img src="./images/proj5-mob.jpg" alt="Проєкт Boxes"/>
+                    </picture>
+                  
                   <div class="card__overlay">
                     Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.
                   </div>
@@ -189,7 +340,26 @@
                 <a href="" class="card-link link">
                   <article class="card">
                 <div class="card__thumb">
-                  <img src="./images/proj6.jpg" alt="Inspiration has no Borders" width="370" />
+                    <picture>
+                      <source 
+                        media="(min-width: 1200px)" 
+                        srcset="
+                          ./images/proj6.jpg 1x,
+                          ./images/proj6-2x.jpg 2x">
+                      <source 
+                        media="(min-width: 768px)" 
+                        srcset="
+                          ./images/proj6-tab.jpg 1x,
+                          ./images/proj6-tab-2x.jpg 2x">
+                      <source 
+                        media="(max-width: 767px)" 
+                        srcset="
+                          ./images/proj6-mob.jpg 1x,
+                          ./images/proj6-mob-2x.jpg 2x">
+
+                      <img src="./images/proj6-mob.jpg" alt="Inspiration has no Borders"/>
+                    </picture>
+                  
                   <div class="card__overlay">
                     Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.
                   </div>
@@ -207,7 +377,26 @@
               <a href="" class="card-link link">
                 <article class="card">
                 <div class="card__thumb">
-                  <img src="./images/proj7.jpg" alt="Видання Limited Edition" width="370" />
+                    <picture>
+                      <source 
+                        media="(min-width: 1200px)" 
+                        srcset="
+                          ./images/proj7.jpg 1x,
+                          ./images/proj7-2x.jpg 2x">
+                      <source 
+                        media="(min-width: 768px)" 
+                        srcset="
+                          ./images/proj7-tab.jpg 1x,
+                          ./images/proj7-tab-2x.jpg 2x">
+                      <source 
+                        media="(max-width: 767px)" 
+                        srcset="
+                          ./images/proj7-mob.jpg 1x,
+                          ./images/proj7-mob-2x.jpg 2x">
+
+                      <img src="./images/proj7-mob.jpg" alt="Видання Limited Edition"/>
+                    </picture>
+                  
                   <div class="card__overlay">
                     Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.
                   </div>
@@ -225,7 +414,26 @@
               <a href="" class="card-link link">
                 <article class="card">
                <div class="card__thumb"> 
-                  <img src="./images/proj8.jpg" alt="Проєкт LAB" width="370" />
+                    <picture>
+                      <source 
+                        media="(min-width: 1200px)" 
+                        srcset="
+                          ./images/proj8.jpg 1x,
+                          ./images/proj8-2x.jpg 2x">
+                      <source 
+                        media="(min-width: 768px)" 
+                        srcset="
+                          ./images/proj8-tab.jpg 1x,
+                          ./images/proj8-tab-2x.jpg 2x">
+                      <source 
+                        media="(max-width: 767px)" 
+                        srcset="
+                          ./images/proj8-mob.jpg 1x,
+                          ./images/proj8-mob-2x.jpg 2x">
+
+                      <img src="./images/proj8-mob.jpg" alt="Проєкт LAB"/>
+                    </picture>
+                  
                   <div class="card__overlay">
                     Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.
                   </div>
@@ -243,7 +451,26 @@
               <a href="" class="card-link link">
                 <article class="card">
                 <div class="card__thumb">
-                  <img src="./images/proj9.jpg" alt="Growing Business" width="370" />
+                    <picture>
+                      <source 
+                        media="(min-width: 1200px)" 
+                        srcset="
+                          ./images/proj9.jpg 1x,
+                          ./images/proj9-2x.jpg 2x">
+                      <source 
+                        media="(min-width: 768px)" 
+                        srcset="
+                          ./images/proj9-tab.jpg 1x,
+                          ./images/proj9-tab-2x.jpg 2x">
+                      <source 
+                        media="(max-width: 767px)" 
+                        srcset="
+                          ./images/proj9-mob.jpg 1x,
+                          ./images/proj9-mob-2x.jpg 2x">
+
+                      <img src="./images/proj9-mob.jpg" alt="Growing Business"/>
+                    </picture>
+                  
                   <div class="card__overlay">
                     Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.
                   </div>
